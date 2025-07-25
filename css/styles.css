@@ -162,7 +162,7 @@ article p:first-letter {
 
 .intro-title {
   text-align: center;        /* Centers the heading text */
-  font-size: 2rem;           /* Adjust size as needed */
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
   color: #000;
@@ -249,30 +249,41 @@ tbody tr:nth-child(odd) {
 /* Gallery Styles */
 .gallery {
   display: grid;
-  grid-template-columns: 1fr; /* Mobile: 1 column */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   margin: 1rem auto;
   max-width: 1200px;
+  text-align: center;
 }
 
 .gallery figure {
-  border: 2px solid #ccc;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
-  background-color: #fff;
+  background-color: #c00000;
   text-align: center;
-}
+ }
 
 .gallery img {
   width: 100%;
   height: auto;
   display: block;
+  border: 4px solid #000;
+  border-radius: 8px;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  }
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.4);
 }
 
 .gallery figcaption {
-  font-size: 0.9rem;
+  background-color: #c00000;
+  color: #fff;
+  font-size: 1.25rem;
   margin-top: 0.5rem;
-  color: #333;
+  padding: 0.5rem;
+  border-radius: 4px;
 }
 /* Title styling for gallery */
 .gallery-title {
@@ -347,7 +358,7 @@ footer {
   }
 
    .profile-img {
-    max-width: 300px; /* Similar to your timeline image */
+    max-width: 300px;
     height: auto;
     margin-top: 2.5rem;
   }
@@ -380,11 +391,11 @@ footer {
   }
 
  .profile-img {
-    max-width: 400px; /* Larger for desktop */
+    max-width: 400px;
   }
 
   .dem-logo {
-    width: 450px; /* Larger image for desktops */
+    width: 450px;
   }
 
   article {
